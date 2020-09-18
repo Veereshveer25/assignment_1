@@ -29,7 +29,7 @@ pipeline {
 				git clone https://github.com/Veereshveer25/C-Project.git
 				fi
 				cd C-Project
-				mvn clea install
+				mvn clean install
 				if [ $? -eq 0 ] ; then
 				echo " Build is success "
 				else
