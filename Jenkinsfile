@@ -4,13 +4,13 @@ pipeline {
 		stage ('STAGE 1') {
 			   agent { label 'node1_test_c'}
 			steps {
-				sh ''' #!/bin/bash
+				sh '''#!/bin/bash
 				git pull https://github.com/Veereshveer25/C-Project.git
 				if [ $? -ne 0 ] ; then
 				git clone https://github.com/Veereshveer25/C-Project.git
 				fi
 				cd C-Project
-				make clean 
+				make ABC.exe
 				if [ $? -eq 0 ] ; then
 				echo " Build is success "
 				else
