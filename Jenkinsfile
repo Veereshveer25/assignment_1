@@ -10,7 +10,7 @@ pipeline {
 				git clone https://github.com/Veereshveer25/C-Project.git
 				fi
 				cd C-Project
-				make clean target
+				make clean 
 				if [ $? -eq 0 ] ; then
 				echo " Build is success "
 				else
