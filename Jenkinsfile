@@ -19,7 +19,6 @@ pipeline {
 				'''
 			}	
 		}
-		stages {
 		stage ('STAGE 2') {
 			   agent { label 'node2'}
 			steps {
