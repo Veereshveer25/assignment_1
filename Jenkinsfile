@@ -20,13 +20,4 @@ pipeline {
 				fi '''
 			}
 		}
-		stage ('STAGE 2') {
-				agent { label 'node2'}
-			steps {
-				echo 'This is slaveforjava with STAGE 2'
-				sh 'sleep 10'
-			}	
-		}
-		
-	}
 }
