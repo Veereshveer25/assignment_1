@@ -1,8 +1,7 @@
 pipeline {
-	agent none
+	agent { label node1_test_c}
         stages {
 		stage ('STAGE 1') {
-			   agent { label 'node1_test_c '}
 			steps {
 				sh '''#!/bin/bash
 				git pull https://github.com/Veereshveer25/C-Project.git
@@ -13,6 +12,7 @@ pipeline {
 				make ABC.exe
 				if [ $? -eq 0 ] ; then
 				echo " Build is success "
+				scp ABc.exe ec2-user@3.135.246.52:/home/ec2-user/apache-tomcat-8.5.58/webapps
 				else
 				echo " Build is failed "
 				fi
@@ -31,6 +31,7 @@ pipeline {
 				mvn clean install
 				if [ $? -eq 0 ] ; then
 				echo " Build is success "
+				scp target ec2-user@3.135.246.52:/home/ec2-user/apache-tomcat-8.5.58/webapps
 				else
 				echo " Build is failed "
 				fi
