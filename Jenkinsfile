@@ -16,7 +16,7 @@ pipeline {
 					steps {
 						echo 'This is node2 with STAGE 1'
 						sh 'sleep 10'
-					}	
+					}
 				}
 			}
 		}
