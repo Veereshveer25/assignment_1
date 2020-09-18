@@ -1,7 +1,6 @@
 pipeline {
 	agent none
- 
-	stages {
+        stages {
 		stage ('STAGE 1') {
 			   agent { label 'node1_test_c'}
 			steps {
