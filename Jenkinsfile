@@ -1,7 +1,6 @@
 pipeline {
 	agent any 
- 
-	stages {
+  	stages {
 		stage ('STAGE 1') {
 			steps {
 				sh 'sleep 10'
@@ -13,4 +12,5 @@ pipeline {
 			}	
 		}
 	}
+}
 		
