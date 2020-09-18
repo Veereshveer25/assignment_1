@@ -2,7 +2,7 @@ pipeline {
 	agent none
         stages {
 		stage ('STAGE 1') {
-		agent {label 'node1'}
+		agent {label 'node1_test_c'}
 			steps {
 				sh '''#!/bin/bash
 				git pull https://github.com/Veereshveer25/C-Project.git
