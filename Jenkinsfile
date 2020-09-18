@@ -17,9 +17,8 @@ pipeline {
 				echo " Build is success "
 				else
 				echo " Build is failed "
-				fi
-				'''
-			}	
+				fi '''
+			}
 		}
 		stage ('STAGE 2') {
 				agent { label 'node2'}
