@@ -1,17 +1,24 @@
 pipeline {
 	agent none
-  	stages {
-		stage ('STAGE 1') {
-		agent {label 'master'}
-			steps {
-				sh 'sleep 10'
-			}	
-		}
-		stage ('STAGE 2') {
-		agent {label 'node2'}
-			steps {
-				sh 'sleep 10'
-			}	
+ 
+	stages {
+		stage ('Make and Maven') {
+			parallel {
+				stage ('makefile') {
+					agent { label 'node1' }
+					steps { 
+						echo 'This is node2 with STAGE 1'
+						sh 'sleep 10'
+					}	
+				}
+				stage ('maven') {
+					agent { label 'node2' }
+					steps {
+						echo 'This is slaveforc node with STAGE 1'
+						sh 'sleep 10'
+					}	
+				}
+			}
 		}
 	}
 }
