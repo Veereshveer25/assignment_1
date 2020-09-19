@@ -14,7 +14,7 @@ pipeline {
 				stage ('maven') {
 					agent { label 'node2' }
 					steps {
-						echo 'This is slaveforc node2 with STAGE 2'
+						echo 'This is node2 with STAGE 2'
 						sh 'sleep 10'
 					}	
 				}
